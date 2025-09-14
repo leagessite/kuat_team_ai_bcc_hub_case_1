@@ -30,7 +30,7 @@ transfers = pd.concat(transfers_list, ignore_index=True)
 txns.to_csv(os.path.join(FOLDER, "txns.csv"), index=False, encoding="utf-8-sig")
 transfers.to_csv(os.path.join(FOLDER, "transfers.csv"), index=False, encoding="utf-8-sig")
 
-# копируем clients.csv как profiles.csv (если у тебя такой файл есть в папке)
+# копируем clients.csv как profiles.csv (если такой файл есть в папке)
 clients_path = os.path.join(DATA_FOLDER, "clients.csv")
 if os.path.exists(clients_path):
     profiles = pd.read_csv(clients_path)
